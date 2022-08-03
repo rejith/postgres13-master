@@ -1,7 +1,7 @@
 app:
     name: Postgres Master
     code: POSTGRES
-    notify: appz@cloudcontrol.com
+    notify: aramanan@cloudcontrol.com
     
 build:
     version: 13.X
@@ -11,7 +11,7 @@ build:
     image_template: postgres_master-13.3
     
 deploy:
-    context: alpha/DEV
+    context: aryam21/DEV
     type: statefulset
     ingress: none
     replicas: 1
@@ -44,10 +44,4 @@ properties:
       vault: PGPASSWORD
     revision : 76
 
-    #WebDav Setup
-    PUSH_BACKUP_WEBDAV: False
-    DAV_FOLDER: DBBACKUP
-    DAV_USER: appz
-    DAV_USERPASSWORD:
-      vault: DAV_USERPASSWORD
-    WEBDAV_BACKUP_URL: http://webdav-2-0/
+    
